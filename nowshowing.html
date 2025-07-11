@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Now Showing</title>
+    <link rel="stylesheet" href="nowshowing.css">
+</head>
+<body>
+      <header class="navbar">
+    <div class="logo-container">
+      <img src="logo.png" alt="PMG Logo" class="nav-logo" />
+      <div class="hover-box">
+        <div class="chains">
+          <span class="chain"></span>
+          <span class="chain"></span>
+        </div>
+        <div class="box-text">Premium Movies Gallery</div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#"><span class="clapper">🎬</span> Now Showing</a></li>
+        <li><a href="#"><span class="clapper">🎬</span> Coming Soon</a></li>
+        <li><a href="#"><span class="clapper">🎬</span> Arabic Movies</a></li>
+        <li><a href="#"><span class="clapper">🎬</span> International Hits</a></li>
+        <li><a href="#"><span class="clapper">🎬</span> About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <div class="movie-container">
+        <div class ="default-text">
+            <h2 id="movie-title">Select a movie to see details</h2>
+            <h1 id="movie-title">Now Showing</h1>
+            <div class="bg-logo"></div>
+        </div>
+        <div class="movie-details">
+            <div class="movie-info">
+                <h2 id="movie-title">Select a movie to see details</h2>
+                <div class="movie-meta">
+                    <span id="movie-genre" class="meta-item">Genre: -</span>
+                    <span id="movie-duration" class="meta-item">Duration: -</span>
+                    <span id="movie-rating" class="meta-item">Rating: -</span>
+                </div>
+                <p id="movie-description" class="movie-description">
+                    Hover over a movie from the list below to see its details.
+                </p>
+                <div class="movie-actions">
+                    <button class="btn-book">Book Now</button>
+                    <button class="btn-trailer">Watch Trailer</button>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <div class="list-contanier">
+        <div class="slider-wrapper">
+            <div class="list-item" 
+                 data-movie-image="3507865_1739944760.jpg" 
+                 data-movie-title="3Alabatal"
+                 data-movie-genre="Action, Drama"
+                 data-movie-duration="2h 15m"
+                 data-movie-rating="8.5/10"
+                 data-movie-description="An epic tale of courage and determination set in ancient times. Follow the journey of heroes as they face incredible challenges and discover their true potential.">
+                <div class="movie-poster">
+                    <img src="3507865_1739944760.jpg" alt="Movie Poster">
+                </div>
+            </div>
+            <div class="list-item" 
+                 data-movie-image="WhatsApp Image 2025-07-11 at 9.32.36 PM (1).jpeg" 
+                 data-movie-title="The Lost Kingdom"
+                 data-movie-genre="Adventure, Fantasy"
+                 data-movie-duration="1h 58m"
+                 data-movie-rating="7.8/10"
+                 data-movie-description="A thrilling adventure through mystical realms where ancient secrets await discovery. Join our heroes on an unforgettable journey.">
+                <div class="movie-poster">
+                    <img src="WhatsApp Image 2025-07-11 at 9.32.36 PM (1).jpeg" alt="Movie Poster">
+                </div>
+            </div>
+            <div class="list-item" 
+                 data-movie-image="WhatsApp Image 2025-07-11 at 9.32.36 PM.jpeg" 
+                 data-movie-title="City Lights"
+                 data-movie-genre="Romance, Comedy"
+                 data-movie-duration="1h 45m"
+                 data-movie-rating="8.2/10"
+                 data-movie-description="A heartwarming romantic comedy that explores love, friendship, and the magic of city life. Perfect for a date night.">
+                <div class="movie-poster">
+                    <img src="WhatsApp Image 2025-07-11 at 9.32.36 PM.jpeg" alt="Movie Poster">
+                </div>
+            </div>
+            <div class="list-item" 
+                 data-movie-image="WhatsApp Image 2025-07-11 at 9.32.37 PM.jpeg" 
+                 data-movie-title="Mystery Manor"
+                 data-movie-genre="Thriller, Mystery"
+                 data-movie-duration="2h 5m"
+                 data-movie-rating="8.7/10"
+                 data-movie-description="A gripping mystery that will keep you guessing until the very end. Can you solve the secrets of the manor?">
+                <div class="movie-poster">
+                    <img src="WhatsApp Image 2025-07-11 at 9.32.37 PM.jpeg" alt="Movie Poster">
+                </div>
+            </div>
+            <div class="list-item" 
+                 data-movie-image="3507865_1739944760.jpg" 
+                 data-movie-title="Ocean's Call"
+                 data-movie-genre="Adventure, Drama"
+                 data-movie-duration="2h 20m"
+                 data-movie-rating="8.0/10"
+                 data-movie-description="Set against the vast ocean, this dramatic adventure explores the human spirit and the call of the unknown.">
+                Movie 5
+            </div>
+            <div class="list-item" 
+                 data-movie-image="3507865_1739944760.jpg" 
+                 data-movie-title="Future World"
+                 data-movie-genre="Sci-Fi, Action"
+                 data-movie-duration="2h 10m"
+                 data-movie-rating="8.3/10"
+                 data-movie-description="A futuristic sci-fi adventure that explores technology, humanity, and the consequences of our choices.">
+                Movie 6
+            </div>
+            <div class="list-item" 
+                 data-movie-image="3507865_1739944760.jpg" 
+                 data-movie-title="Mountain Peak"
+                 data-movie-genre="Adventure, Drama"
+                 data-movie-duration="1h 55m"
+                 data-movie-rating="7.9/10"
+                 data-movie-description="An inspiring story of determination and human spirit as climbers face the ultimate challenge.">
+                Movie 7
+            </div>
+            <div class="list-item" 
+                 data-movie-image="3507865_1739944760.jpg" 
+                 data-movie-title="Desert Storm"
+                 data-movie-genre="Action, War"
+                 data-movie-duration="2h 25m"
+                 data-movie-rating="8.1/10"
+                 data-movie-description="An intense war drama set in the harsh desert environment, testing the limits of human endurance.">
+                Movie 8
+            </div>
+            <div class="list-item" 
+                 data-movie-image="3507865_1739944760.jpg" 
+                 data-movie-title="Forest Tales"
+                 data-movie-genre="Fantasy, Adventure"
+                 data-movie-duration="1h 50m"
+                 data-movie-rating="8.4/10"
+                 data-movie-description="A magical journey through enchanted forests where mythical creatures and ancient magic await.">
+                Movie 9
+            </div>
+            <div class="list-item" 
+                 data-movie-image="3507865_1739944760.jpg" 
+                 data-movie-title="Urban Dreams"
+                 data-movie-genre="Drama, Romance"
+                 data-movie-duration="2h 0m"
+                 data-movie-rating="7.7/10"
+                 data-movie-description="A contemporary drama exploring modern relationships and the pursuit of dreams in the city.">
+                Movie 10
+            </div>
+            <div class="list-item" 
+                 data-movie-image="3507865_1739944760.jpg" 
+                 data-movie-title="Space Odyssey"
+                 data-movie-genre="Sci-Fi, Adventure"
+                 data-movie-duration="2h 30m"
+                 data-movie-rating="8.6/10"
+                 data-movie-description="An epic space adventure that takes you beyond the stars to explore the mysteries of the universe.">
+                Movie 11
+            </div>
+            <div class="list-item" 
+                 data-movie-image="3507865_1739944760.jpg" 
+                 data-movie-title="Time Traveler"
+                 data-movie-genre="Sci-Fi, Thriller"
+                 data-movie-duration="2h 15m"
+                 data-movie-rating="8.8/10"
+                 data-movie-description="A mind-bending thriller about time travel and the consequences of changing the past.">
+                Movie 12
+            </div>
+            <div class="list-item" 
+                 data-movie-image="3507865_1739944760.jpg" 
+                 data-movie-title="Royal Court"
+                 data-movie-genre="Drama, Historical"
+                 data-movie-duration="2h 40m"
+                 data-movie-rating="8.9/10"
+                 data-movie-description="A lavish historical drama set in royal courts, filled with intrigue, power, and betrayal.">
+                Movie 13
+            </div>
+            <div class="list-item" 
+                 data-movie-image="3507865_1739944760.jpg" 
+                 data-movie-title="Underworld"
+                 data-movie-genre="Horror, Thriller"
+                 data-movie-duration="1h 55m"
+                 data-movie-rating="7.5/10"
+                 data-movie-description="A chilling horror thriller that explores the dark depths of the human psyche and supernatural forces.">
+                Movie 14
+            </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+    <footer class="footer">
+    <p>&copy; 2025 PMG Cinema. All rights reserved.</p>
+  </footer>
+    <script src="nowshowing.js"></script>
+
+</body>
+</html>
