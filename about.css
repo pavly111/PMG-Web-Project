@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins&display=swap");
+
+:root {
+  --bg-dark: #111;
+  --nav-bg: #1e1e1e;
+  --gold-accent: #ffbf00;
+  --deep-red: #c44536;
+  --cool-teal: #2ec4b6;
+  --text-cream: #f6f5f2;
+  --wood-brown: #5a3e2b;
+  --wood-border: #deb887;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-cream);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: var(--nav-bg);
+  padding: 10px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--gold-accent);
+}
+
+.logo-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(20px);
+}
+
+.nav-logo {
+  height: 50px;
+  filter: drop-shadow(0 0 5px var(--gold-accent));
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.logo-container:hover .nav-logo {
+  transform: scale(1.15);
+}
+
+.hover-box {
+  position: absolute;
+  top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.logo-container:hover .hover-box {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.chains {
+  display: flex;
+  gap: 80px;
+  height: 25px;
+}
+
+.chain {
+  width: 3px;
+  height: 25px;
+  background: linear-gradient(to bottom, #ccc, #999);
+  box-shadow: 1px 1px 2px #000;
+  border-radius: 1px;
+}
+
+.box-text {
+  background: var(--wood-brown);
+  color: #ffe5a5;
+  font-family: "Cinzel", serif;
+  font-size: 1em;
+  padding: 12px 24px;
+  border: 3px solid var(--wood-border);
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 5px;
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.5);
+  animation: swing 2s infinite ease-in-out;
+  transform-origin: top center;
+}
+
+@keyframes swing {
+  0% { transform: rotate(2deg); }
+  50% { transform: rotate(-2deg); }
+  100% { transform: rotate(2deg); }
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: var(--text-cream);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a:hover {
+  color: var(--gold-accent);
+}
+
+.clapper {
+  display: inline-block;
+  margin-right: 8px;
+  opacity: 0;
+  transform: scale(1) rotate(0);
+  transition: opacity 0.3s ease;
+  text-shadow: none;
+}
+
+nav ul li:hover .clapper {
+  opacity: 1;
+  animation: fakeClap 0.4s ease-in-out;
+  text-shadow: 0 0 8px var(--gold-accent), 0 0 12px var(--gold-accent);
+}
+
+@keyframes fakeClap {
+  0% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-25deg) scale(1.2); }
+  50% { transform: rotate(15deg) scale(1); }
+  75% { transform: rotate(-10deg) scale(1.1); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+.bg-logo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  background-image: url("logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.08;
+  z-index: 0;
+  pointer-events: none;
+  filter: grayscale(100%) contrast(120%) brightness(140%);
+}
+
+.content {
+  text-align: center;
+  padding: 80px 20px 40px;
+  z-index: 2;
+  position: relative;
+}
+
+.content h1 {
+  font-family: "Cinzel", serif;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: var(--gold-accent);
+}
+
+.logo-wrapper {
+  height: 300px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
+.popcorn-container {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.popcorn-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+  z-index: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.about-logo {
+  width: 150px;
+  height: auto;
+  margin: 0; 
+  transform: scale(1);
+  transition: transform 0.4s ease-in-out;
+}
+
+.popcorn-container:hover .about-logo {
+  transform: scale(2);
+}
+
+.icon-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.floating {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  filter: grayscale(100%);
+  transition:
+    transform 0.6s ease,
+    opacity 0.4s ease,
+    filter 0.3s ease;
+}
+
+.popcorn-container:hover .floating {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popcorn-container:hover .floating:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(0deg) translate(180px) rotate(-0deg);
+}
+.popcorn-container:hover .floating:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(45deg) translate(180px) rotate(-45deg);
+}
+.popcorn-container:hover .floating:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(90deg) translate(180px) rotate(-90deg);
+}
+.popcorn-container:hover .floating:nth-child(4) {
+  transform: translate(-50%, -50%) rotate(135deg) translate(180px) rotate(-135deg);
+}
+.popcorn-container:hover .floating:nth-child(5) {
+  transform: translate(-50%, -50%) rotate(180deg) translate(180px) rotate(-180deg);
+}
+.popcorn-container:hover .floating:nth-child(6) {
+  transform: translate(-50%, -50%) rotate(225deg) translate(180px) rotate(-225deg);
+}
+.popcorn-container:hover .floating:nth-child(7) {
+  transform: translate(-50%, -50%) rotate(270deg) translate(180px) rotate(-270deg);
+}
+.popcorn-container:hover .floating:nth-child(8) {
+  transform: translate(-50%, -50%) rotate(315deg) translate(180px) rotate(-315deg);
+}
+
+.floating:hover {
+  filter: grayscale(0%);
+  cursor: pointer;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--nav-bg);
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9em;
+  color: #aaa;
+  border-top: 2px solid var(--deep-red);
+  z-index: 100;
+}
