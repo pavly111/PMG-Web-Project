@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PMG Studios</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="box" id="authBox">
+    <div class="brand" id="brandLogo">
+      <img src="logo.png" alt="PMG Logo" class="main-logo" />
+      <p>Cinematic Tech. Vintage Soul.</p>
+    </div>
+
+    <div class="login" id="loginContainer">
+      <form class="loginBx login-form" onsubmit="return false;">
+        <h2><i class="fa-solid fa-right-to-bracket"></i> Login</h2>
+        <input type="email" placeholder="Email" required />
+        <div class="password-field">
+          <input type="password" placeholder="Password" required />
+          <i class="fa-solid fa-eye toggle-password"></i>
+        </div>
+        <input type="submit" value="Sign in" onclick="window.location.href='dashboard.html'" />
+        <div class="group">
+          <a href="#">Forgot Password</a>
+          <a id="show-signup">Sign up</a>
+        </div>
+      </form>
+
+      <form class="loginBx signup-form" onsubmit="return false;">
+        <h2><i class="fa-solid fa-user-plus"></i> Sign Up</h2>
+        <input type="text" placeholder="Username" required />
+        <input type="email" placeholder="Email" required />
+        <div class="password-field">
+          <input type="password" placeholder="Password" required />
+          <i class="fa-solid fa-eye toggle-password"></i>
+        </div>
+        <div class="password-field">
+          <input type="password" placeholder="Confirm Password" required />
+          <i class="fa-solid fa-eye toggle-password"></i>
+        </div>
+        <input type="submit" value="Create Account" />
+        <div class="group">
+          <a id="show-login">Back to Login</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
