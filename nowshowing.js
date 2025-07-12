@@ -17,7 +17,7 @@ listItems.forEach(item => {
         const rating = this.getAttribute('data-movie-rating');
         const description = this.getAttribute('data-movie-description');
         if (movieImage) {
-            document.documentElement.style.setProperty('--bg-image', `url("${movieImage}")`);
+            document.documentElement.style.setProperty('--bg-image', `url("posters/${movieImage}")`);
         }
         if (movieTitle) movieTitle.textContent = title;
         if (movieGenre) movieGenre.textContent = `Genre: ${genre}`;
@@ -74,7 +74,7 @@ function updateButtons() {
 }
 
 nextBtn.addEventListener('click', () => {
-    if (currentIndex < items.length - visibleItems) {
+    if (currentIndex < items.length - visibleItems-1) {
         currentIndex++;
         updateSlider();
         updateButtons();

@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="navbar">
+   <header class="navbar">
     <div class="logo-container">
       <a href="dashboard.html">
         <img src="logo.png" alt="PMG Logo" class="nav-logo" />
@@ -24,11 +24,18 @@
     </div>
     <nav>
       <ul>
-        <li><a href="#"><span class="clapper">🎬</span> Now Showing</a></li>
-        <li><a href="#"><span class="clapper">🎬</span> Coming Soon</a></li>
-        <li><a href="#"><span class="clapper">🎬</span> Arabic Movies</a></li>
-        <li><a href="#"><span class="clapper">🎬</span> International Hits</a></li>
-        <li><a href="about.html"><span class="clapper">🎬</span> About Us</a></li>
+        <li><a href="dashboard.html"> Home</a></li>
+        <li class="dropdown">
+          <a href="#"><span class="clapper">🎬</span> Category</a>
+          <div class="dropdown-content">
+            <a href="nowshowing.html">Now Showing</a>
+            <a href="comingsoon.html">Coming Soon</a>
+            <a href="arbic.html">Arabic Movies</a>
+            <a href="hits.html">International Hits</a>
+          </div>
+        </li>
+        <li><a href="about.html"> About Us</a></li>
+        <button onclick="window.location.href='index.html'">Log in / Sign up</button>
       </ul>
     </nav>
   </header>

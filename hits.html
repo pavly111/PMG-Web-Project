@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Hits</title>
+    <link rel="stylesheet" href="nowshowing.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo-container">
+      <a href="dashboard.html">
+        <img src="logo.png" alt="PMG Logo" class="nav-logo" />
+      </a>
+      <div class="hover-box">
+        <div class="chains">
+          <span class="chain"></span>
+          <span class="chain"></span>
+        </div>
+        <div class="box-text">Premium Movies Gallery</div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="dashboard.html"> Home</a></li>
+        <li class="dropdown">
+          <a href="#"><span class="clapper">🎬</span> Category</a>
+          <div class="dropdown-content">
+            <a href="nowshowing.html">Now Showing</a>
+            <a href="comingsoon.html">Coming Soon</a>
+            <a href="arbic.html">Arabic Movies</a>
+            <a href="hits.html">International Hits</a>
+          </div>
+        </li>
+        <li><a href="about.html"> About Us</a></li>
+        <button onclick="window.location.href='index.html'">Log in / Sign up</button>
+      </ul>
+    </nav>
+  </header>
+
+    <div class="movie-container">
+        <div class ="default-text">
+            <h2 id="default">Select a movie to see details</h2>
+            <h1 id="default" style="margin-left:130px;">Best Hits</h1>
+            <div class="bg-logo"></div>
+        </div>
+        <div class="movie-details">
+            <div class="movie-info">
+                <h2 id="movie-title">Select a movie to see details</h2>
+                <div class="movie-meta">
+                    <span id="movie-genre" class="meta-item">Genre: -</span>
+                    <span id="movie-duration" class="meta-item">Duration: -</span>
+                    <span id="movie-rating" class="meta-item">Rating: -</span>
+                </div>
+                <p id="movie-description" class="movie-description">
+                    Hover over a movie from the list below to see its details.
+                </p>
+                <div class="movie-actions">
+                    <button class="btn-book">Book Now</button>
+                    <button class="btn-trailer">Watch Trailer</button>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <div class="list-contanier">
+        <div class="slider-wrapper">
+
+            <div class="list-item" 
+                 data-movie-image="f1-image.jpg" 
+                 data-movie-title="F1"
+                 data-movie-genre="Action, Drama"
+                 data-movie-duration="2h 15m"
+                 data-movie-rating="8.1/10"
+                 data-movie-description="Brad Pitt stars as a former Formula 1 driver who returns to the sport to mentor a rookie driver. Set against the backdrop of the high-stakes world of Formula 1 racing, this film explores the passion, danger.">
+                <div class="movie-poster">
+                    <img src="posters\f1-posterjpg.jpg" alt="F1">
+                </div>
+            </div>
+
+            <div class="list-item" 
+                 data-movie-image="thunderbolts (2).jpg" 
+                 data-movie-title="Thunderbolts"
+                 data-movie-genre="Action, Adventure"
+                 data-movie-duration="2h 5m"
+                 data-movie-rating="7.8/10"
+                 data-movie-description="A team of antiheroes and reformed villains come together to undertake dangerous missions for the government. This Marvel film explores redemption and unlikely alliances in the superhero world.">
+                <div class="movie-poster">
+                    <img src="posters\thunderbolts.jpg" alt="Thunderbolts">
+                </div>
+            </div>
+
+            <div class="list-item" 
+                 data-movie-image="seko-image.jpg" 
+                 data-movie-title="Seko Seko"
+                 data-movie-genre="Comedy, Drama"
+                 data-movie-duration="2h 15m"
+                 data-movie-rating="8.5/10"
+                 data-movie-description="A hilarious comedy about a group of friends who get into all sorts of trouble. Starring Mohamed Saad and featuring the best of Egyptian humor and wit.">
+                <div class="movie-poster">
+                    <img src="posters/seko.jpg" alt="Seko Seko">
+                </div>
+            </div>
+
+            <div class="list-item" 
+                 data-movie-image="superman-image.jpg" 
+                 data-movie-title="Superman"
+                 data-movie-genre="Action, Adventure"
+                 data-movie-duration="2h 25m"
+                 data-movie-rating="8.3/10"
+                 data-movie-description="The Man of Steel returns in this epic reboot of the iconic superhero. Follow Clark Kent as he discovers his true identity and learns to use his extraordinary powers to protect Earth from new threats.">
+                <div class="movie-poster">
+                    <img src="posters/superman.jpg" alt="Superman">
+                </div>
+            </div>
+
+            <div class="list-item" 
+                 data-movie-image="deadpool-image.jpg" 
+                 data-movie-title="Deadpool & Wolverine"
+                 data-movie-genre="Action, Comedy"
+                 data-movie-duration="2h 15m"
+                 data-movie-rating="8.2/10"
+                 data-movie-description="The Merc with a Mouth teams up with the legendary Wolverine in this epic Marvel crossover. Expect action, humor, and plenty of fourth-wall breaking as these two iconic characters join forces.">
+                <div class="movie-poster">
+                    <img src="posters/deadpool.jpg" alt="Deadpool & Wolverine">
+                </div>
+            </div>
+
+             <div class="list-item" 
+                 data-movie-image="elhrefa-image.jpg" 
+                 data-movie-title="الحريفة"
+                 data-movie-genre="Drama, Social"
+                 data-movie-duration="2h 15m"
+                 data-movie-rating="8.2/10"
+                 data-movie-description="A powerful social drama about daily life in Egypt, exploring themes of hope, struggle, and resilience.">
+                <div class="movie-poster">
+                    <img src="posters/elhrefa.jpg" alt="الحريفة">
+                </div>
+            </div>
+
+            <div class="list-item" 
+                 data-movie-image="insideout2-image.jpg" 
+                 data-movie-title="Inside Out 2"
+                 data-movie-genre="Animation, Adventure"
+                 data-movie-duration="1h 45m"
+                 data-movie-rating="8.0/10"
+                 data-movie-description="Riley is now a teenager, and her emotions are going through some major changes. Joy, Sadness, Anger, Fear, and Disgust must navigate new emotions and help Riley through the challenges of adolescence.">
+                <div class="movie-poster">
+                    <img src="posters/insideout2.jpg" alt="Inside Out 2">
+                </div>
+            </div>
+                         <div class="list-item" 
+                 data-movie-image="sltan-image.jpg" 
+                 data-movie-title="الهوي سلطان"
+                 data-movie-genre="Romance, Drama"
+                 data-movie-duration="2h 0m"
+                 data-movie-rating="8.0/10"
+                 data-movie-description="A modern love story about young Egyptians navigating relationships, careers, and dreams in contemporary society.">
+                <div class="movie-poster">
+                    <img src="posters/sltan.jpg" alt="الهوي سلطان">
+                </div>
+            </div>
+
+            <div class="list-item" 
+                 data-movie-image="oppe-image.jpg" 
+                 data-movie-title="Oppenheimer"
+                 data-movie-genre="Biography, Drama"
+                 data-movie-duration="3h 0m"
+                 data-movie-rating="8.4/10"
+                 data-movie-description="The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb. This epic biographical drama explores the moral complexities of scientific discovery and its devastating consequences.">
+                <div class="movie-poster">
+                    <img src="posters/oppe.jpg" alt="Oppenheimer">
+                </div>
+            </div>
+
+            <div class="list-item" 
+                 data-movie-image="spider-image.jpg" 
+                 data-movie-title="Spider-Man: Across the Spider-Verse"
+                 data-movie-genre="Animation, Action"
+                 data-movie-duration="2h 20m"
+                 data-movie-rating="8.6/10"
+                 data-movie-description="Miles Morales embarks on an epic adventure across the multiverse, encountering a team of Spider-People charged with protecting its very existence. When the heroes clash on how to handle a new threat, Miles must redefine what it means to be a hero.">
+                <div class="movie-poster">
+                    <img src="posters/spider.jpg" alt="Spider-Man: Across the Spider-Verse">
+                </div>
+            </div>
+            <div class="list-item" 
+                 data-movie-image="ahmed-image.jpg" 
+                 data-movie-title="احمد واحمد"
+                 data-movie-genre="Comedy, Romance"
+                 data-movie-duration="1h 50m"
+                 data-movie-rating="8.3/10"
+                 data-movie-description="A charming romantic comedy about two men named Ahmed who find themselves in a series of hilarious misunderstandings. A delightful Egyptian comedy.">
+                <div class="movie-poster">
+                    <img src="posters/ahmed.jpg" alt="احمد واحمد">
+                </div>
+            </div>
+
+            <div class="list-item" 
+                 data-movie-image="restart-image.jpg" 
+                 data-movie-title="ريستارت "
+                 data-movie-genre="Action, Thriller"
+                 data-movie-duration="2h 25m"
+                 data-movie-rating="8.7/10"
+                 data-movie-description="An intense action thriller about a secret project that goes wrong. When the system needs to be restarted, chaos ensues. Starring Ahmed Ezz in a gripping performance.">
+                <div class="movie-poster">
+                    <img src="posters/restart.jpg" alt="ريستات">
+                </div>
+            </div>
+
+            <div class="list-item" 
+                 data-movie-image="gardians-image.jpg" 
+                 data-movie-title="Guardians of the Galaxy"
+                 data-movie-genre="Action, Adventure"
+                 data-movie-duration="2h 5m"
+                 data-movie-rating="8.0/10"
+                 data-movie-description="A group of intergalactic misfits are forced to work together to stop a fanatical warrior with plans to purge the universe. This cosmic adventure combines action, humor, and heart in the Marvel Cinematic Universe.">
+                <div class="movie-poster">
+                    <img src="posters/gardians.jpg" alt="Guardians of the Galaxy">
+                </div>
+            </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+    <footer class="footer">
+    <p>&copy; 2025 PMG Cinema. All rights reserved.</p>
+  </footer>
+    <script src="nowshowing.js"></script>
+
+</body>
+</html>

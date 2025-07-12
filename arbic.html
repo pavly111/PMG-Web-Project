@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arabic Movies</title>
+    <link rel="stylesheet" href="nowshowing.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo-container">
+      <a href="dashboard.html">
+        <img src="logo.png" alt="PMG Logo" class="nav-logo" />
+      </a>
+      <div class="hover-box">
+        <div class="chains">
+          <span class="chain"></span>
+          <span class="chain"></span>
+        </div>
+        <div class="box-text">Premium Movies Gallery</div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="dashboard.html"> Home</a></li>
+        <li class="dropdown">
+          <a href="#"><span class="clapper">🎬</span> Category</a>
+          <div class="dropdown-content">
+            <a href="nowshowing.html">Now Showing</a>
+            <a href="comingsoon.html">Coming Soon</a>
+            <a href="arbic.html">Arabic Movies</a>
+            <a href="hits.html">International Hits</a>
+          </div>
+        </li>
+        <li><a href="about.html"> About Us</a></li>
+        <button onclick="window.location.href='index.html'">Log in / Sign up</button>
+      </ul>
+    </nav>
+  </header>
+
+    <div class="movie-container">
+        <div class ="default-text">
+            <h2 id="default">Select a movie to see details</h2>
+            <h1 id="default">Arabic Movies</h1>
+            <div class="bg-logo"></div>
+        </div>
+        <div class="movie-details">
+            <div class="movie-info">
+                <h2 id="movie-title">Select a movie to see details</h2>
+                <div class="movie-meta">
+                    <span id="movie-genre" class="meta-item">Genre: -</span>
+                    <span id="movie-duration" class="meta-item">Duration: -</span>
+                    <span id="movie-rating" class="meta-item">Rating: -</span>
+                </div>
+                <p id="movie-description" class="movie-description">
+                    Hover over a movie from the list below to see its details.
+                </p>
+                <div class="movie-actions">
+                    <button class="btn-book">Book Now</button>
+                    <button class="btn-trailer">Watch Trailer</button>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <div class="list-contanier">
+        <div class="slider-wrapper">
+            <div class="list-item" 
+                 data-movie-image="seko-image.jpg" 
+                 data-movie-title="Seko Seko"
+                 data-movie-genre="Comedy, Drama"
+                 data-movie-duration="2h 15m"
+                 data-movie-rating="8.5/10"
+                 data-movie-description="A hilarious comedy about a group of friends who get into all sorts of trouble. Starring Mohamed Saad and featuring the best of Egyptian humor and wit.">
+                <div class="movie-poster">
+                    <img src="posters/seko.jpg" alt="Seko Seko">
+                </div>
+            </div>
+             <div class="list-item" 
+                 data-movie-image="sltan-image.jpg" 
+                 data-movie-title="الهوي سلطان"
+                 data-movie-genre="Romance, Drama"
+                 data-movie-duration="2h 0m"
+                 data-movie-rating="8.0/10"
+                 data-movie-description="A modern love story about young Egyptians navigating relationships, careers, and dreams in contemporary society.">
+                <div class="movie-poster">
+                    <img src="posters/sltan.jpg" alt="الهوي سلطان">
+                </div>
+            </div>
+            <div class="list-item" 
+                 data-movie-image="ahmed-image.jpg" 
+                 data-movie-title="احمد واحمد"
+                 data-movie-genre="Comedy, Romance"
+                 data-movie-duration="1h 50m"
+                 data-movie-rating="8.3/10"
+                 data-movie-description="A charming romantic comedy about two men named Ahmed who find themselves in a series of hilarious misunderstandings. A delightful Egyptian comedy.">
+                <div class="movie-poster">
+                    <img src="posters/ahmed.jpg" alt="احمد واحمد">
+                </div>
+            </div>
+            <div class="list-item" 
+                 data-movie-image="restart-image.jpg" 
+                 data-movie-title="ريستارت "
+                 data-movie-genre="Action, Thriller"
+                 data-movie-duration="2h 25m"
+                 data-movie-rating="8.7/10"
+                 data-movie-description="An intense action thriller about a secret project that goes wrong. When the system needs to be restarted, chaos ensues. Starring Ahmed Ezz in a gripping performance.">
+                <div class="movie-poster">
+                    <img src="posters/restart.jpg" alt="ريستات">
+                </div>
+            </div>
+            <div class="list-item" 
+                 data-movie-image="elhrefa-image.jpg" 
+                 data-movie-title="الحريفة"
+                 data-movie-genre="Drama, Social"
+                 data-movie-duration="2h 15m"
+                 data-movie-rating="8.2/10"
+                 data-movie-description="A powerful social drama about daily life in Egypt, exploring themes of hope, struggle, and resilience.">
+                <div class="movie-poster">
+                    <img src="posters/elhrefa.jpg" alt="الحريفة">
+                </div>
+            </div>
+
+            <div class="list-item" 
+                 data-movie-image="misterx-image.webp" 
+                 data-movie-title="MR.X"
+                 data-movie-genre="Drama, Social"
+                 data-movie-duration="2h 10m"
+                 data-movie-rating="8.3/10"
+                 data-movie-description="A social drama exploring life in a traditional Egyptian neighborhood. A heartwarming story about community and family bonds.">
+                <div class="movie-poster">
+                    <img src="posters/misterx.webp" alt="MR.X">
+                </div>
+            </div>
+            <div class="list-item" 
+                 data-movie-image="b3b3.jpeg" 
+                 data-movie-title="البعبع"
+                 data-movie-genre="Comedy, Action"
+                 data-movie-duration="1h 50m"
+                 data-movie-rating="7.9/10"
+                 data-movie-description="A comedy about a group of friends who get involved in a series of hilarious misadventures. Starring Mohamed Henedy.">
+                <div class="movie-poster">
+                    <img src="posters/b3b3.webp" alt="البعبع">
+                </div>
+            </div>
+            <div class="list-item" 
+                 data-movie-image="tree-image.jpeg" 
+                 data-movie-title="اخي فوق الشجرة"
+                 data-movie-genre="Drama, Historical"
+                 data-movie-duration="2h 25m"
+                 data-movie-rating="8.5/10"
+                 data-movie-description="A historical drama set in 1950s Cairo, exploring the city's transformation and the lives of its diverse inhabitants.">
+                <div class="movie-poster">
+                    <img src="posters/tree.jpg" alt="اخي فوق الشجرة">
+                </div>
+            </div>
+            <div class="list-item" 
+                 data-movie-image="image.png" 
+                 data-movie-title="السرب"
+                 data-movie-genre="Action, Crime"
+                 data-movie-duration="2h 30m"
+                 data-movie-rating="8.8/10"
+                 data-movie-description="A crime thriller about a powerful businessman who becomes entangled in the criminal underworld. Starring Amr Youssef.">
+                <div class="movie-poster">
+                    <img src="posters/srb.jpg" alt="السرب">
+                </div>
+            </div>
+
+                        <div class="list-item" 
+                 data-movie-image="x-image.jpg" 
+                 data-movie-title="المشروع x"
+                 data-movie-genre="Fantasy, Drama"
+                 data-movie-duration="2h 15m"
+                 data-movie-rating="8.6/10"
+                 data-movie-description="A magical fantasy film about a young magician discovering his powers. Set in modern Cairo with ancient Egyptian mythology.">
+                <div class="movie-poster">
+                    <img src="posters/x.jpg" alt="المشروع x">
+                </div>
+            </div>
+
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+    <footer class="footer">
+    <p>&copy; 2025 PMG Cinema. All rights reserved.</p>
+  </footer>
+    <script src="nowshowing.js"></script>
+
+</body>
+</html>

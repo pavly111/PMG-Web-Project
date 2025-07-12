@@ -141,6 +141,105 @@ nav ul li a:hover {
   color: var(--gold-accent);
 }
 
+.search-container {
+  position: relative;
+  margin-right: 20px;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid transparent;
+  border-radius: 25px;
+  padding: 8px 15px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.search-box:hover {
+  border-color: var(--gold-accent);
+  box-shadow: 0 6px 20px rgba(255, 191, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.search-box:focus-within {
+  border-color: var(--gold-accent);
+  box-shadow: 0 8px 25px rgba(255, 191, 0, 0.4);
+  transform: translateY(-3px);
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-cream);
+  font-size: 14px;
+  width: 200px;
+  padding: 8px 0;
+  transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: rgba(246, 245, 242, 0.6);
+  font-style: italic;
+}
+
+.search-input:focus::placeholder {
+  color: var(--gold-accent);
+  opacity: 0.8;
+}
+
+.search-btn {
+  background: var(--gold-accent);
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+  box-shadow: 0 2px 8px rgba(255, 191, 0, 0.3);
+}
+
+.search-btn:hover {
+  background: #e6ac00;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(255, 191, 0, 0.5);
+}
+
+.search-btn i {
+  color: var(--bg-dark);
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.search-btn:hover i {
+  transform: scale(1.2);
+}
+
+/* Search animation */
+@keyframes searchPulse {
+  0% {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 6px 20px rgba(255, 191, 0, 0.4);
+  }
+  100% {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.search-box:focus-within {
+  animation: searchPulse 2s infinite;
+}
+
 .clapper {
   display: inline-block;
   margin-right: 8px;

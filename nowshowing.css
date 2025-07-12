@@ -207,10 +207,7 @@ body::before {
 .list-contanier {
   position: relative;
   width: 100%;
-  height: 300px;
-  overflow: hidden;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  height: 400px;
   margin-left: 25px;
 }
 
@@ -219,10 +216,10 @@ body::before {
   align-items: center;
   justify-content: center;
   width: 180px;
-  height: 200px;
+  height: 250px;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.7);
-  border: 2px solid var(--deep-red);
+  border: 2px solid transparent;
   cursor: pointer;
   transition: 0.3s ease;
   color: var(--text-cream);
@@ -421,4 +418,52 @@ nav ul li:hover .clapper {
   50% { transform: rotate(15deg) scale(1); }
   75% { transform: rotate(-10deg) scale(1.1); }
   100% { transform: rotate(0deg) scale(1); }
+}
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  font-size: 14px;
+  background: #3a3830;
+  border-radius: 4px;
+  max-width: 150px;
+  z-index: 100;
+}
+
+.dropdown-content a {
+  display: block;
+  color: #fff;
+  padding: 10px 3px 10px 10px;
+  text-decoration: none;
+  min-width: 150px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+li a {
+  margin-left: 8px;
+  margin-right: 30px;
+  margin-bottom: 0px;
+  margin-top: 7px;
+}
+
+li a:hover {
+  color: var(--gold-accent);
+}
+button {
+  padding: 10px 20px;
+  background-color: var(--gold-accent);
+  color: rgb(46, 46, 46);
+  border: 2px solid #111;
+  border-radius: 5px;
+  font-family: "Cinzel", serif;
+  position: unset;
+  cursor: pointer;
 }

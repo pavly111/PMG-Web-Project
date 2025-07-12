@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <link rel="stylesheet" href="nowshowing.css">
+</head>
+<body>
+<header class="navbar">
+    <div class="logo-container">
+      <a href="dashboard.html">
+        <img src="logo.png" alt="PMG Logo" class="nav-logo" />
+      </a>
+      <div class="hover-box">
+        <div class="chains">
+          <span class="chain"></span>
+          <span class="chain"></span>
+        </div>
+        <div class="box-text">Premium Movies Gallery</div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="dashboard.html"> Home</a></li>
+        <li class="dropdown">
+          <a href="#"><span class="clapper">🎬</span> Category</a>
+          <div class="dropdown-content">
+            <a href="nowshowing.html">Now Showing</a>
+            <a href="comingsoon.html">Coming Soon</a>
+            <a href="arbic.html">Arabic Movies</a>
+            <a href="hits.html">International Hits</a>
+          </div>
+        </li>
+        <li><a href="about.html"> About Us</a></li>
+        <button onclick="window.location.href='index.html'">Log in / Sign up</button>
+      </ul>
+    </nav>
+  </header>
+
+
+    <div class="movie-container">
+        <div class ="default-text">
+            <h2 id="default">Select a movie to see details</h2>
+            <h1 id="default">Coming Soon</h1>
+            <div class="bg-logo"></div>
+        </div>
+        <div class="movie-details">
+            <div class="movie-info">
+                <h2 id="movie-title">Select a movie to see details</h2>
+                <div class="movie-meta">
+                    <span id="movie-genre" class="meta-item">Genre: -</span>
+                    <span id="movie-duration" class="meta-item">Duration: -</span>
+                    <span id="movie-rating" class="meta-item">Rating: -</span>
+                </div>
+                <p id="movie-description" class="movie-description">
+                    Hover over a movie from the list below to see its details.
+                </p>
+                <div class="movie-actions">
+                    <button class="btn-book">Book Now</button>
+                    <button class="btn-trailer">Watch Trailer</button>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <div class="list-contanier">
+        <div class="slider-wrapper">
+            <div class="list-item" 
+                 data-movie-image="batman-image.jpg" 
+                 data-movie-title="The Batman: Part II"
+                 data-movie-genre="Action, Crime"
+                 data-movie-duration="2h 45m"
+                 data-movie-rating="8.8/10"
+                 data-movie-description="Robert Pattinson returns as the Dark Knight in this highly anticipated sequel. Batman faces new challenges in Gotham City as he confronts a mysterious new villain and uncovers dark secrets.">
+                <div class="movie-poster">
+                    <img src="posters/batman.jpg" alt="The Batman: Part II">
+                </div>
+            </div>
+            <div class="list-item" 
+                 data-movie-image="avatar-image.jpg" 
+                 data-movie-title="Avatar 3"
+                 data-movie-genre="Sci-Fi, Adventure"
+                 data-movie-duration="3h 15m"
+                 data-movie-rating="8.5/10"
+                 data-movie-description="James Cameron's epic saga continues as Jake Sully and Neytiri explore new regions of Pandora and face unprecedented threats that could change the fate of their world forever.">
+                <div class="movie-poster">
+                    <img src="posters/avatar.jpg" alt="Avatar 3">
+                </div>
+            </div>
+            <div class="list-item" 
+                 data-movie-image="captain-image.webp" 
+                 data-movie-title="Captain America: Brave New World"
+                 data-movie-genre="Action, Adventure"
+                 data-movie-duration="2h 20m"
+                 data-movie-rating="8.2/10"
+                 data-movie-description="Sam Wilson takes on the mantle of Captain America in this thrilling new chapter. As he navigates the complexities of being a superhero in a changing world, he must confront new threats.">
+                <div class="movie-poster">
+                    <img src="posters/captin.jpg" alt="Captain America: Brave New World">
+                </div>
+            </div>
+            <div class="list-item" 
+                 data-movie-image="fantastic-image.jpg" 
+                 data-movie-title="Fantastic Four"
+                 data-movie-genre="Action, Adventure"
+                 data-movie-duration="2h 10m"
+                 data-movie-rating="8.0/10"
+                 data-movie-description="Marvel's First Family makes their long-awaited return to the big screen. Follow the adventures of Mr. Fantastic, Invisible Woman, Human Torch, and The Thing as they discover their powers.">
+                <div class="movie-poster">
+                    <img src="posters/fantastic.jpg" alt="Fantastic Four">
+                </div>
+            </div>
+            <div class="list-item" 
+                 data-movie-image="blade-image.jpg" 
+                 data-movie-title="Blade"
+                 data-movie-genre="Action, Horror"
+                 data-movie-duration="2h 5m"
+                 data-movie-rating="8.3/10"
+                 data-movie-description="The legendary vampire hunter returns in this Marvel reboot. Blade must protect humanity from a new breed of vampires while uncovering secrets about his own mysterious past.">
+                <div class="movie-poster">
+                    <img src="posters/blade.jpg" alt="Blade">
+                </div>
+            </div>
+            <div class="list-item" 
+                 data-movie-image="lotr-image.jpg" 
+                 data-movie-title="The Lord of the Rings: The War of the Rohirrim"
+                 data-movie-genre="Animation, Fantasy"
+                 data-movie-duration="2h 30m"
+                 data-movie-rating="8.7/10"
+                 data-movie-description="An animated epic set in Middle-earth, telling the story of Helm Hammerhand and the legendary war that shaped the fate of Rohan. A new chapter in Tolkien's beloved universe.">
+                <div class="movie-poster">
+                    <img src="posters/lotr.jpg" alt="The Lord of the Rings: The War of the Rohirrim">
+                </div>
+            </div>
+            <div class="list-item" 
+                 data-movie-image="moana-image.jpg" 
+                 data-movie-title="Moana 2"
+                 data-movie-genre="Animation, Adventure"
+                 data-movie-duration="1h 55m"
+                 data-movie-rating="8.3/10"
+                 data-movie-description="Moana returns in this highly anticipated sequel as she embarks on a new adventure across the Pacific. With new challenges and discoveries, she must once again prove her worth as a wayfinder.">
+                <div class="movie-poster">
+                    <img src="posters/moana.jpg" alt="Moana 2">
+                </div>
+            </div>
+            <div class="list-item" 
+                 data-movie-image="kraven-image.webp" 
+                 data-movie-title="Kraven the Hunter"
+                 data-movie-genre="Action, Thriller"
+                 data-movie-duration="2h 0m"
+                 data-movie-rating="7.9/10"
+                 data-movie-description="The origin story of one of Spider-Man's most formidable foes. Sergei Kravinoff becomes the ultimate hunter, tracking down the most dangerous prey in this intense action thriller.">
+                <div class="movie-poster">
+                    <img src="posters/kraven.jpg" alt="Kraven the Hunter">
+                </div>
+            </div>
+            <div class="list-item" 
+                 data-movie-image="venom-image.jpg" 
+                 data-movie-title="Venom 3"
+                 data-movie-genre="Action, Sci-Fi"
+                 data-movie-duration="2h 15m"
+                 data-movie-rating="8.2/10"
+                 data-movie-description="Tom Hardy returns as Eddie Brock and his alien symbiote Venom in this thrilling sequel. As they face new threats and challenges, the bond between man and symbiote is tested like never before.">
+                <div class="movie-poster">
+                    <img src="posters/venom.jpg" alt="Venom 3">
+                </div>
+            </div>
+            <div class="list-item" 
+                 data-movie-image="joker-image.jpg" 
+                 data-movie-title="Joker: Folie à Deux"
+                 data-movie-genre="Crime, Drama"
+                 data-movie-duration="2h 35m"
+                 data-movie-rating="8.6/10"
+                 data-movie-description="Joaquin Phoenix returns as Arthur Fleck in this musical sequel. Harley Quinn joins the story as the Joker's twisted romance unfolds in Arkham Asylum.">
+                <div class="movie-poster">
+                    <img src="posters/joker.jpg" alt="Joker: Folie à Deux">
+                </div>
+            </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+    <footer class="footer">
+    <p>&copy; 2025 PMG Cinema. All rights reserved.</p>
+  </footer>
+    <script src="nowshowing.js"></script>
+
+</body>
+</html>

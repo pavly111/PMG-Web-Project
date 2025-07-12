@@ -310,3 +310,180 @@ nav ul li:hover .clapper {
   border-top: 2px solid var(--deep-red);
   z-index: 100;
 }
+.navbar {
+  width: 100%;
+  background-color: transparent;
+  padding: 10px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--gold-accent);
+  z-index: 1000;
+}
+
+.logo-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(20px);
+}
+
+.nav-logo {
+  height: 50px;
+  filter: drop-shadow(0 0 5px var(--gold-accent));
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.logo-container:hover .nav-logo {
+  transform: scale(1.15);
+}
+
+.hover-box {
+  position: absolute;
+  top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.logo-container:hover .hover-box {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.chains {
+  display: flex;
+  gap: 80px;
+  height: 25px;
+}
+
+.chain {
+  width: 3px;
+  height: 25px;
+  background: linear-gradient(to bottom, #ccc, #999);
+  box-shadow: 1px 1px 2px #000;
+  border-radius: 1px;
+}
+.box-text {
+  background: var(--wood-brown);
+  color: #ffe5a5;
+  font-family: "Cinzel", serif;
+  font-size: 1em;
+  padding: 12px 24px;
+  border: 3px solid var(--wood-border);
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 5px;
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.5);
+  animation: swing 2s infinite ease-in-out;
+  transform-origin: top center;
+  z-index: 99999999999;
+}
+
+@keyframes swing {
+  0% { transform: rotate(2deg); }
+  50% { transform: rotate(-2deg); }
+  100% { transform: rotate(2deg); }
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: var(--text-cream);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a:hover {
+  color: var(--gold-accent);
+}
+
+.clapper {
+  display: inline-block;
+  margin-right: 8px;
+  opacity: 0;
+  transform: scale(1) rotate(0);
+  transition: opacity 0.3s ease;
+  text-shadow: none;
+}
+
+nav ul li:hover .clapper {
+  opacity: 1;
+  animation: fakeClap 0.4s ease-in-out;
+  text-shadow: 0 0 8px var(--gold-accent), 0 0 12px var(--gold-accent);
+}
+
+@keyframes fakeClap {
+  0% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-25deg) scale(1.2); }
+  50% { transform: rotate(15deg) scale(1); }
+  75% { transform: rotate(-10deg) scale(1.1); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  font-size: 14px;
+  background: #3a3830;
+  border-radius: 4px;
+  max-width: 150px;
+  z-index: 100;
+}
+
+.dropdown-content a {
+  display: block;
+  color: #fff;
+  padding: 10px 3px 10px 10px;
+  text-decoration: none;
+  min-width: 150px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+li a {
+  margin-left: 8px;
+  margin-right: 30px;
+  margin-bottom: 0px;
+  margin-top: 7px;
+}
+
+li a:hover {
+  color: var(--gold-accent);
+}
+button {
+  padding: 10px 20px;
+  background-color: var(--gold-accent);
+  color: rgb(46, 46, 46);
+  border: 2px solid #111;
+  border-radius: 5px;
+  font-family: "Cinzel", serif;
+  position: unset;
+  cursor: pointer;
+}

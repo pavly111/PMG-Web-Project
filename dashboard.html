@@ -11,9 +11,9 @@
 </head>
 
 <body>
-  <header class="navbar">
+ <header class="navbar">
     <div class="logo-container">
-      <a href="#home">
+      <a href="dashboard.html">
         <img src="logo.png" alt="PMG Logo" class="nav-logo" />
       </a>
       <div class="hover-box">
@@ -26,18 +26,26 @@
     </div>
     <nav>
       <ul>
-        <li><a href="#home"> Home</a></li>
+        <li class="search-container">
+          <div class="search-box">
+            <input type="search" placeholder="Search movies..." class="search-input" />
+            <button class="search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </li>
+        <li><a href="dashboard.html"> Home</a></li>
         <li class="dropdown">
           <a href="#"><span class="clapper">🎬</span> Category</a>
           <div class="dropdown-content">
-            <a href="#">Now Showing</a>
-            <a href="#">Coming Soon</a>
-            <a href="#">Arabic Movies</a>
-            <a href="#">International Hits</a>
+            <a href="nowshowing.html">Now Showing</a>
+            <a href="comingsoon.html">Coming Soon</a>
+            <a href="arbic.html">Arabic Movies</a>
+            <a href="hits.html">International Hits</a>
           </div>
         </li>
-        <li><a href="#"> About Us</a></li>
-        <button>Log in / Sign up</button>
+        <li><a href="about.html"> About Us</a></li>
+        <button onclick="window.location.href='index.html'">Log in / Sign up</button>
       </ul>
     </nav>
   </header>

@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="nowshowing.css">
 </head>
 <body>
-      <header class="navbar">
+  <header class="navbar">
     <div class="logo-container">
-      <img src="logo.png" alt="PMG Logo" class="nav-logo" />
+      <a href="dashboard.html">
+        <img src="logo.png" alt="PMG Logo" class="nav-logo" />
+      </a>
       <div class="hover-box">
         <div class="chains">
           <span class="chain"></span>
@@ -20,11 +22,18 @@
     </div>
     <nav>
       <ul>
-        <li><a href="#"><span class="clapper">🎬</span> Now Showing</a></li>
-        <li><a href="#"><span class="clapper">🎬</span> Coming Soon</a></li>
-        <li><a href="#"><span class="clapper">🎬</span> Arabic Movies</a></li>
-        <li><a href="#"><span class="clapper">🎬</span> International Hits</a></li>
-        <li><a href="#"><span class="clapper">🎬</span> About Us</a></li>
+        <li><a href="dashboard.html"> Home</a></li>
+        <li class="dropdown">
+          <a href="#"><span class="clapper">🎬</span> Category</a>
+          <div class="dropdown-content">
+            <a href="nowshowing.html">Now Showing</a>
+            <a href="comingsoon.html">Coming Soon</a>
+            <a href="arbic.html">Arabic Movies</a>
+            <a href="hits.html">International Hits</a>
+          </div>
+        </li>
+        <li><a href="about.html"> About Us</a></li>
+        <button onclick="window.location.href='index.html'">Log in / Sign up</button>
       </ul>
     </nav>
   </header>
@@ -56,138 +65,114 @@
     <div class="list-contanier">
         <div class="slider-wrapper">
             <div class="list-item" 
-                 data-movie-image="3507865_1739944760.jpg" 
-                 data-movie-title="3Alabatal"
+                 data-movie-image="f1-image.jpg" 
+                 data-movie-title="F1"
                  data-movie-genre="Action, Drama"
                  data-movie-duration="2h 15m"
-                 data-movie-rating="8.5/10"
-                 data-movie-description="An epic tale of courage and determination set in ancient times. Follow the journey of heroes as they face incredible challenges and discover their true potential.">
-                <div class="movie-poster">
-                    <img src="3507865_1739944760.jpg" alt="Movie Poster">
-                </div>
-            </div>
-            <div class="list-item" 
-                 data-movie-image="WhatsApp Image 2025-07-11 at 9.32.36 PM (1).jpeg" 
-                 data-movie-title="The Lost Kingdom"
-                 data-movie-genre="Adventure, Fantasy"
-                 data-movie-duration="1h 58m"
-                 data-movie-rating="7.8/10"
-                 data-movie-description="A thrilling adventure through mystical realms where ancient secrets await discovery. Join our heroes on an unforgettable journey.">
-                <div class="movie-poster">
-                    <img src="WhatsApp Image 2025-07-11 at 9.32.36 PM (1).jpeg" alt="Movie Poster">
-                </div>
-            </div>
-            <div class="list-item" 
-                 data-movie-image="WhatsApp Image 2025-07-11 at 9.32.36 PM.jpeg" 
-                 data-movie-title="City Lights"
-                 data-movie-genre="Romance, Comedy"
-                 data-movie-duration="1h 45m"
-                 data-movie-rating="8.2/10"
-                 data-movie-description="A heartwarming romantic comedy that explores love, friendship, and the magic of city life. Perfect for a date night.">
-                <div class="movie-poster">
-                    <img src="WhatsApp Image 2025-07-11 at 9.32.36 PM.jpeg" alt="Movie Poster">
-                </div>
-            </div>
-            <div class="list-item" 
-                 data-movie-image="WhatsApp Image 2025-07-11 at 9.32.37 PM.jpeg" 
-                 data-movie-title="Mystery Manor"
-                 data-movie-genre="Thriller, Mystery"
-                 data-movie-duration="2h 5m"
-                 data-movie-rating="8.7/10"
-                 data-movie-description="A gripping mystery that will keep you guessing until the very end. Can you solve the secrets of the manor?">
-                <div class="movie-poster">
-                    <img src="WhatsApp Image 2025-07-11 at 9.32.37 PM.jpeg" alt="Movie Poster">
-                </div>
-            </div>
-            <div class="list-item" 
-                 data-movie-image="3507865_1739944760.jpg" 
-                 data-movie-title="Ocean's Call"
-                 data-movie-genre="Adventure, Drama"
-                 data-movie-duration="2h 20m"
-                 data-movie-rating="8.0/10"
-                 data-movie-description="Set against the vast ocean, this dramatic adventure explores the human spirit and the call of the unknown.">
-                Movie 5
-            </div>
-            <div class="list-item" 
-                 data-movie-image="3507865_1739944760.jpg" 
-                 data-movie-title="Future World"
-                 data-movie-genre="Sci-Fi, Action"
-                 data-movie-duration="2h 10m"
-                 data-movie-rating="8.3/10"
-                 data-movie-description="A futuristic sci-fi adventure that explores technology, humanity, and the consequences of our choices.">
-                Movie 6
-            </div>
-            <div class="list-item" 
-                 data-movie-image="3507865_1739944760.jpg" 
-                 data-movie-title="Mountain Peak"
-                 data-movie-genre="Adventure, Drama"
-                 data-movie-duration="1h 55m"
-                 data-movie-rating="7.9/10"
-                 data-movie-description="An inspiring story of determination and human spirit as climbers face the ultimate challenge.">
-                Movie 7
-            </div>
-            <div class="list-item" 
-                 data-movie-image="3507865_1739944760.jpg" 
-                 data-movie-title="Desert Storm"
-                 data-movie-genre="Action, War"
-                 data-movie-duration="2h 25m"
                  data-movie-rating="8.1/10"
-                 data-movie-description="An intense war drama set in the harsh desert environment, testing the limits of human endurance.">
-                Movie 8
+                 data-movie-description="Brad Pitt stars as a former Formula 1 driver who returns to the sport to mentor a rookie driver. Set against the backdrop of the high-stakes world of Formula 1 racing, this film explores the passion, danger.">
+                <div class="movie-poster">
+                    <img src="posters\f1-posterjpg.jpg" alt="F1">
+                </div>
             </div>
             <div class="list-item" 
-                 data-movie-image="3507865_1739944760.jpg" 
-                 data-movie-title="Forest Tales"
-                 data-movie-genre="Fantasy, Adventure"
-                 data-movie-duration="1h 50m"
-                 data-movie-rating="8.4/10"
-                 data-movie-description="A magical journey through enchanted forests where mythical creatures and ancient magic await.">
-                Movie 9
+                 data-movie-image="thunderbolts (2).jpg" 
+                 data-movie-title="Thunderbolts"
+                 data-movie-genre="Action, Adventure"
+                 data-movie-duration="2h 5m"
+                 data-movie-rating="7.8/10"
+                 data-movie-description="A team of antiheroes and reformed villains come together to undertake dangerous missions for the government. This Marvel film explores redemption and unlikely alliances in the superhero world.">
+                <div class="movie-poster">
+                    <img src="posters\thunderbolts.jpg" alt="Thunderbolts">
+                </div>
             </div>
             <div class="list-item" 
-                 data-movie-image="3507865_1739944760.jpg" 
-                 data-movie-title="Urban Dreams"
-                 data-movie-genre="Drama, Romance"
-                 data-movie-duration="2h 0m"
-                 data-movie-rating="7.7/10"
-                 data-movie-description="A contemporary drama exploring modern relationships and the pursuit of dreams in the city.">
-                Movie 10
+                 data-movie-image="superman-image.jpg" 
+                 data-movie-title="Superman"
+                 data-movie-genre="Action, Adventure"
+                 data-movie-duration="2h 25m"
+                 data-movie-rating="8.3/10"
+                 data-movie-description="The Man of Steel returns in this epic reboot of the iconic superhero. Follow Clark Kent as he discovers his true identity and learns to use his extraordinary powers to protect Earth from new threats.">
+                <div class="movie-poster">
+                    <img src="posters/superman.jpg" alt="Superman">
+                </div>
             </div>
             <div class="list-item" 
-                 data-movie-image="3507865_1739944760.jpg" 
-                 data-movie-title="Space Odyssey"
+                 data-movie-image="mission-image.jpg" 
+                 data-movie-title="Mission: Impossible - The Final"
+                 data-movie-genre="Action, Thriller"
+                 data-movie-duration="2h 35m"
+                 data-movie-rating="8.5/10"
+                 data-movie-description="Ethan Hunt faces his most dangerous mission yet as he confronts a powerful enemy that threatens the entire world. This final chapter promises to be the most explosive and thrilling installment of the franchise.">
+                <div class="movie-poster">
+                    <img src="posters/mission.jpg" alt="Mission: Impossible - The Final">
+                </div>
+            </div>
+            <div class="list-item" 
+                 data-movie-image="dune-image.jpg" 
+                 data-movie-title="Dune: Part Two"
                  data-movie-genre="Sci-Fi, Adventure"
-                 data-movie-duration="2h 30m"
-                 data-movie-rating="8.6/10"
-                 data-movie-description="An epic space adventure that takes you beyond the stars to explore the mysteries of the universe.">
-                Movie 11
+                 data-movie-duration="2h 46m"
+                 data-movie-rating="8.7/10"
+                 data-movie-description="Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family. As he endeavors to prevent a terrible future.">
+                <div class="movie-poster">
+                    <img src="posters/dune-poster.jpg" alt="Dune: Part Two">
+                </div>
             </div>
             <div class="list-item" 
-                 data-movie-image="3507865_1739944760.jpg" 
-                 data-movie-title="Time Traveler"
-                 data-movie-genre="Sci-Fi, Thriller"
+                 data-movie-image="deadpool-image.jpg" 
+                 data-movie-title="Deadpool & Wolverine"
+                 data-movie-genre="Action, Comedy"
                  data-movie-duration="2h 15m"
-                 data-movie-rating="8.8/10"
-                 data-movie-description="A mind-bending thriller about time travel and the consequences of changing the past.">
-                Movie 12
+                 data-movie-rating="8.2/10"
+                 data-movie-description="The Merc with a Mouth teams up with the legendary Wolverine in this epic Marvel crossover. Expect action, humor, and plenty of fourth-wall breaking as these two iconic characters join forces.">
+                <div class="movie-poster">
+                    <img src="posters/deadpool.jpg" alt="Deadpool & Wolverine">
+                </div>
             </div>
             <div class="list-item" 
-                 data-movie-image="3507865_1739944760.jpg" 
-                 data-movie-title="Royal Court"
-                 data-movie-genre="Drama, Historical"
-                 data-movie-duration="2h 40m"
-                 data-movie-rating="8.9/10"
-                 data-movie-description="A lavish historical drama set in royal courts, filled with intrigue, power, and betrayal.">
-                Movie 13
+                 data-movie-image="insideout2-image.jpg" 
+                 data-movie-title="Inside Out 2"
+                 data-movie-genre="Animation, Adventure"
+                 data-movie-duration="1h 45m"
+                 data-movie-rating="8.0/10"
+                 data-movie-description="Riley is now a teenager, and her emotions are going through some major changes. Joy, Sadness, Anger, Fear, and Disgust must navigate new emotions and help Riley through the challenges of adolescence.">
+                <div class="movie-poster">
+                    <img src="posters/insideout2.jpg" alt="Inside Out 2">
+                </div>
             </div>
             <div class="list-item" 
-                 data-movie-image="3507865_1739944760.jpg" 
-                 data-movie-title="Underworld"
-                 data-movie-genre="Horror, Thriller"
-                 data-movie-duration="1h 55m"
-                 data-movie-rating="7.5/10"
-                 data-movie-description="A chilling horror thriller that explores the dark depths of the human psyche and supernatural forces.">
-                Movie 14
+                 data-movie-image="oppe-image.jpg" 
+                 data-movie-title="Oppenheimer"
+                 data-movie-genre="Biography, Drama"
+                 data-movie-duration="3h 0m"
+                 data-movie-rating="8.4/10"
+                 data-movie-description="The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb. This epic biographical drama explores the moral complexities of scientific discovery and its devastating consequences.">
+                <div class="movie-poster">
+                    <img src="posters/oppe.jpg" alt="Oppenheimer">
+                </div>
+            </div>
+            <div class="list-item" 
+                 data-movie-image="spider-image.jpg" 
+                 data-movie-title="Spider-Man: Across the Spider-Verse"
+                 data-movie-genre="Animation, Action"
+                 data-movie-duration="2h 20m"
+                 data-movie-rating="8.6/10"
+                 data-movie-description="Miles Morales embarks on an epic adventure across the multiverse, encountering a team of Spider-People charged with protecting its very existence. When the heroes clash on how to handle a new threat, Miles must redefine what it means to be a hero.">
+                <div class="movie-poster">
+                    <img src="posters/spider.jpg" alt="Spider-Man: Across the Spider-Verse">
+                </div>
+            </div>
+            <div class="list-item" 
+                 data-movie-image="gardians-image.jpg" 
+                 data-movie-title="Guardians of the Galaxy"
+                 data-movie-genre="Action, Adventure"
+                 data-movie-duration="2h 5m"
+                 data-movie-rating="8.0/10"
+                 data-movie-description="A group of intergalactic misfits are forced to work together to stop a fanatical warrior with plans to purge the universe. This cosmic adventure combines action, humor, and heart in the Marvel Cinematic Universe.">
+                <div class="movie-poster">
+                    <img src="posters/gardians.jpg" alt="Guardians of the Galaxy">
+                </div>
             </div>
         </div>
         <button class="prev">&#10094;</button>
