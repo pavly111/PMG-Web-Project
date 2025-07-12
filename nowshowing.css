@@ -1,12 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins&display=swap");
 
+
 :root {
-  --bg-dark: #1e1e1e;
+  --bg-dark: #111;
+  --nav-bg: #1e1e1e;
   --gold-accent: #ffbf00;
   --deep-red: #c44536;
   --cool-teal: #2ec4b6;
   --text-cream: #f6f5f2;
-  --bg-image: none;
+  --wood-brown: #5a3e2b;
+  --wood-border: #deb887;
 }
 
 * {
@@ -63,7 +66,7 @@ body::before {
   border-radius: 15px;
   padding: 25px;
   transition: all 0.3s ease;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(0px);
 }
 .default-text{
   display: block;
@@ -206,7 +209,7 @@ body::before {
   width: 100%;
   height: 300px;
   overflow: hidden;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 10px;
   margin-left: 25px;
 }
@@ -219,7 +222,7 @@ body::before {
   height: 200px;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.7);
-  border: 2px solid transparent;
+  border: 2px solid var(--deep-red);
   cursor: pointer;
   transition: 0.3s ease;
   color: var(--text-cream);
@@ -291,8 +294,8 @@ button.next {
   filter: grayscale(100%) contrast(120%) brightness(140%);
 }
 .navbar {
-    width: 100%;
-  background-color: var(--nav-bg);
+  width: 100%;
+  background-color: transparent;
   padding: 10px 30px;
   display: flex;
   flex-wrap: wrap;
@@ -366,6 +369,7 @@ button.next {
   box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.5);
   animation: swing 2s infinite ease-in-out;
   transform-origin: top center;
+  z-index: 99999999999;
 }
 
 @keyframes swing {

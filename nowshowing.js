@@ -24,7 +24,7 @@ listItems.forEach(item => {
         if (movieDuration) movieDuration.textContent = `Duration: ${duration}`;
         if (movieRating) movieRating.textContent = `Rating: ${rating}`;
         if (movieDescription) movieDescription.textContent = description;
-        
+         
         const movieDetails = document.querySelector('.movie-details');
         const defualtText = document.querySelector('.default-text');
         if (movieDetails) {

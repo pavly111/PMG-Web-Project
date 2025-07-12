@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard | PMG Cinema</title>
   <link rel="stylesheet" href="dashboard.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <header class="navbar">
     <div class="logo-container">
-      <img src="logo.png" alt="PMG Logo" class="nav-logo" />
+      <a href="#home">
+        <img src="logo.png" alt="PMG Logo" class="nav-logo" />
+      </a>
       <div class="hover-box">
         <div class="chains">
           <span class="chain"></span>
@@ -22,35 +26,117 @@
     </div>
     <nav>
       <ul>
-        <li><a href="#"><span class="clapper">🎬</span> Now Showing</a></li>
-        <li><a href="#"><span class="clapper">🎬</span> Coming Soon</a></li>
-        <li><a href="#"><span class="clapper">🎬</span> Arabic Movies</a></li>
-        <li><a href="#"><span class="clapper">🎬</span> International Hits</a></li>
-        <li><a href="#"><span class="clapper">🎬</span> About Us</a></li>
+        <li><a href="#home"> Home</a></li>
+        <li class="dropdown">
+          <a href="#"><span class="clapper">🎬</span> Category</a>
+          <div class="dropdown-content">
+            <a href="#">Now Showing</a>
+            <a href="#">Coming Soon</a>
+            <a href="#">Arabic Movies</a>
+            <a href="#">International Hits</a>
+          </div>
+        </li>
+        <li><a href="#"> About Us</a></li>
+        <button>Log in / Sign up</button>
       </ul>
     </nav>
   </header>
 
   <div class="bg-logo"></div>
 
-  <main class="content">
+  <main class="content" id="home">
     <h1>🎬 Welcome to PMG Cinema</h1>
     <p>Explore the world of movies, from Arabic legends to global blockbusters.</p>
 
-    <section class="movies-grid">
-      <div class="movie-card"><img src="posters/oppenheimer.jpg" alt="Oppenheimer"><p>Oppenheimer</p></div>
-      <div class="movie-card"><img src="posters/interstellar.jpg" alt="Interstellar"><p>Interstellar</p></div>
-      <div class="movie-card"><img src="posters/avatar2.jpg" alt="Avatar 2"><p>Avatar: Way of Water</p></div>
-      <div class="movie-card"><img src="posters/blackadam.jpg" alt="Black Adam"><p>Black Adam</p></div>
-      <div class="movie-card"><img src="posters/3alabatal.jpg" alt="3Alabatal"><p>على البطل</p></div>
-      <div class="movie-card"><img src="posters/elsaher.jpg" alt="Elsaher"><p>الساحر</p></div>
-      <div class="movie-card"><img src="posters/elharam.jpg" alt="El Haram"><p>الحرام</p></div>
-      <div class="movie-card"><img src="posters/thecreator.jpg" alt="The Creator"><p>The Creator</p></div>
-    </section>
-  </main>
 
+  </main>
+  <h1>Now Showing</h1>
+  <div class="slider">
+    <button class="arrow arrow-left"></button>
+    <input type="radio" name="card" id="c-1">
+    <input type="radio" name="card" id="c-2">
+    <input type="radio" name="card" id="c-3" checked>
+    <input type="radio" name="card" id="c-4">
+    <input type="radio" name="card" id="c-5">
+    <button class="arrow arrow-right">></button>
+
+    <div class="cards">
+
+      <label for="c-1" class="item">
+        <div class="main_content">
+          <div class="img">
+            <img src="Illuminate.jpg" alt="">
+          </div>
+
+          <div class="content">
+            <h1>Illuminate</h1>
+          </div>
+        </div>
+      </label>
+
+      <label for="c-2" class="item">
+        <div class="main_content">
+          <div class="img">
+            <img src="7.jpg" alt="">
+          </div>
+
+          <div class="content">
+            <h1>Top Gun</h1>
+          </div>
+        </div>
+      </label>
+
+      <label for="c-3" class="item">
+        <div class="main_content">
+          <div class="img">
+            <img src="3.jpg" alt="">
+          </div>
+
+          <div class="content">
+            <h1>Oppenheimer</h1>
+          </div>
+        </div>
+      </label>
+
+      <label for="c-4" class="item">
+        <div class="main_content">
+          <div class="img">
+            <img src="4.jpg" alt="">
+          </div>
+
+          <div class="content">
+            <h1>Inception</h1>
+          </div>
+        </div>
+      </label>
+
+      <label for="c-5" class="item">
+        <div class="main_content">
+          <div class="img">
+            <img src="5.jpg" alt="">
+          </div>
+
+          <div class="content">
+            <h1>Intersteller</h1>
+          </div>
+        </div>
+      </label>
+
+    </div>
+
+    <div class="dots">
+      <label for="c-1"></label>
+      <label for="c-2"></label>
+      <label for="c-3"></label>
+      <label for="c-4"></label>
+      <label for="c-5"></label>
+    </div>
+
+  </div>
   <footer class="footer">
     <p>&copy; 2025 PMG Cinema. All rights reserved.</p>
   </footer>
+  <script src="generic.js"></script>
 </body>
+
 </html>
