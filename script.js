@@ -1,4 +1,32 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Loading screen functionality
+  const loader = document.getElementById("fake-loading-screen");
+  const mainContent = document.getElementById("main-content");
+  const loadingGif = document.querySelector(".loading-gif");
+  const loadingText = document.querySelector(".loading-text");
+  
+  // Set loading time to exactly 10 seconds
+  const totalLoadingTime = 10000; // 10 seconds in milliseconds
+  
+  // Animate the dots in "Popcorning..."
+  const dots = ["", ".", "..", "..."];
+  let dotIndex = 0;
+  
+  const dotInterval = setInterval(() => {
+    loadingText.textContent = "Popcorning" + dots[dotIndex];
+    dotIndex = (dotIndex + 1) % dots.length;
+  }, 500); // Change dots every 500ms
+  
+  setTimeout(() => {
+    clearInterval(dotInterval); // Stop the dot animation
+    loader.style.opacity = 0;
+    setTimeout(() => {
+      loader.style.display = "none";
+      mainContent.style.display = "flex";
+    }, 1000);
+  }, totalLoadingTime);
+
+  // Auth box functionality
   const box = document.getElementById("authBox");
   const brand = document.getElementById("brandLogo");
   const loginContainer = document.getElementById("loginContainer");

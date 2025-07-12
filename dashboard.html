@@ -6,12 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard | PMG Cinema</title>
   <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="loading.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins&display=swap" rel="stylesheet">
 </head>
 
 <body>
- <header class="navbar">
+  <div id="fake-loading-screen">
+    <img src="popcorning.gif" alt="Loading" class="loading-gif" />
+    <p class="loading-text">Popcorning</p>
+  </div>
+
+  <header class="navbar">
     <div class="logo-container">
       <a href="dashboard.html">
         <img src="logo.png" alt="PMG Logo" class="nav-logo" />
@@ -52,15 +58,13 @@
 
   <div class="bg-logo"></div>
 
-  <main class="content" id="home">
+  <main id="home">
     <h1>🎬 Welcome to PMG Cinema</h1>
     <p>Explore the world of movies, from Arabic legends to global blockbusters.</p>
-
-
   </main>
   <h1>Now Showing</h1>
   <div class="slider">
-    <button class="arrow arrow-left"></button>
+    <button class="arrow arrow-left"><</button>
     <input type="radio" name="card" id="c-1">
     <input type="radio" name="card" id="c-2">
     <input type="radio" name="card" id="c-3" checked>
@@ -69,15 +73,22 @@
     <button class="arrow arrow-right">></button>
 
     <div class="cards">
-
       <label for="c-1" class="item">
         <div class="main_content">
           <div class="img">
             <img src="Illuminate.jpg" alt="">
           </div>
-
-          <div class="content">
+          <div class="content" style="background-image: url('Illuminate.jpg')">
+            <div class="poster-circle">
+              <img src="Illuminate.jpg" alt="">
+            </div>
             <h1>Illuminate</h1>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span>8.9/10</span>
+            </div>
+            <p>An epic fantasy adventure about light overcoming darkness. Follow the journey of a young hero who must master the ancient art of illumination to save their world from eternal night.</p>
+            <button class="book-now-btn" onclick="openBookingModal('Illuminate', 'Illuminate.jpg', '8.9', '120 min', 'Fantasy, Adventure')">Book Now</button>
           </div>
         </div>
       </label>
@@ -87,9 +98,17 @@
           <div class="img">
             <img src="7.jpg" alt="">
           </div>
-
-          <div class="content">
+          <div class="content" style="background-image: url('7.jpg')">
+            <div class="poster-circle">
+              <img src="7.jpg" alt="">
+            </div>
             <h1>Top Gun</h1>
+            <div class="rating">
+              <span class="stars">★★★★☆</span>
+              <span>8.3/10</span>
+            </div>
+            <p>High-flying action with Maverick back in the cockpit. The long-awaited sequel brings back the adrenaline and aerial stunts that made the original a classic.</p>
+            <button class="book-now-btn" onclick="openBookingModal('Top Gun', '7.jpg', '8.3', '131 min', 'Action, Drama')">Book Now</button>
           </div>
         </div>
       </label>
@@ -99,9 +118,17 @@
           <div class="img">
             <img src="3.jpg" alt="">
           </div>
-
-          <div class="content">
+          <div class="content" style="background-image: url('3.jpg')">
+            <div class="poster-circle">
+              <img src="3.jpg" alt="">
+            </div>
             <h1>Oppenheimer</h1>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span>9.1/10</span>
+            </div>
+            <p>The story of the father of the atomic bomb. A gripping biographical thriller about J. Robert Oppenheimer and the Manhattan Project that changed the world forever.</p>
+            <button class="book-now-btn" onclick="openBookingModal('Oppenheimer', '3.jpg', '9.1', '180 min', 'Biography, Drama, History')">Book Now</button>
           </div>
         </div>
       </label>
@@ -111,9 +138,17 @@
           <div class="img">
             <img src="4.jpg" alt="">
           </div>
-
-          <div class="content">
+          <div class="content" style="background-image: url('4.jpg')">
+            <div class="poster-circle">
+              <img src="4.jpg" alt="">
+            </div>
             <h1>Inception</h1>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span>8.8/10</span>
+            </div>
+            <p>A mind-bending journey through dreams within dreams. Christopher Nolan's masterpiece about a thief who steals corporate secrets through dream-sharing technology.</p>
+            <button class="book-now-btn" onclick="openBookingModal('Inception', '4.jpg', '8.8', '148 min', 'Sci-Fi, Thriller')">Book Now</button>
           </div>
         </div>
       </label>
@@ -123,13 +158,20 @@
           <div class="img">
             <img src="5.jpg" alt="">
           </div>
-
-          <div class="content">
-            <h1>Intersteller</h1>
+          <div class="content" style="background-image: url('5.jpg')">
+            <div class="poster-circle">
+              <img src="5.jpg" alt="">
+            </div>
+            <h1>Interstellar</h1>
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span>8.6/10</span>
+            </div>
+            <p>A cosmic voyage through space and time. A team of explorers travel through a wormhole in search of a new home for humanity in this sci-fi epic.</p>
+            <button class="book-now-btn" onclick="openBookingModal('Interstellar', '5.jpg', '8.6', '169 min', 'Sci-Fi, Adventure')">Book Now</button>
           </div>
         </div>
       </label>
-
     </div>
 
     <div class="dots">
@@ -139,12 +181,245 @@
       <label for="c-4"></label>
       <label for="c-5"></label>
     </div>
-
   </div>
+
+  <!-- Booking Modal -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal">
+      <div class="floating-elements">
+        <div class="floating-element" style="left: 10%; animation-delay: 0s;">🎬</div>
+        <div class="floating-element" style="left: 20%; animation-delay: -2s;">🍿</div>
+        <div class="floating-element" style="left: 30%; animation-delay: -4s;">🎭</div>
+        <div class="floating-element" style="left: 40%; animation-delay: -6s;">🎪</div>
+        <div class="floating-element" style="left: 50%; animation-delay: -8s;">🎨</div>
+        <div class="floating-element" style="left: 60%; animation-delay: -10s;">🎵</div>
+        <div class="floating-element" style="left: 70%; animation-delay: -12s;">⭐</div>
+        <div class="floating-element" style="left: 80%; animation-delay: -14s;">✨</div>
+        <div class="floating-element" style="left: 90%; animation-delay: -16s;">🎯</div>
+      </div>
+
+      <div class="modal-header">
+        <div class="header-content">
+          <div class="movie-info">
+            <img src="https://via.placeholder.com/80x120/333/fff?text=Movie" alt="Movie Poster" class="movie-poster" id="modalPoster">
+            <div class="movie-details">
+              <h2 id="modalTitle">Movie Title</h2>
+              <div class="movie-meta">
+                <span id="modalRating">⭐ -</span>
+                <span id="modalDuration">🕐 -</span>
+                <span id="modalGenre">🎭 -</span>
+              </div>
+            </div>
+          </div>
+          <button class="close-btn" onclick="closeBookingModal()">×</button>
+        </div>
+      </div>
+
+      <div class="modal-content">
+        <div class="step-indicator">
+          <div class="step active" id="step1">1</div>
+          <div class="step" id="step2">2</div>
+          <div class="step" id="step3">3</div>
+          <div class="step" id="step4">4</div>
+        </div>
+
+        <div class="step-content" id="showtimeStep">
+          <h3 style="text-align: center; margin-bottom: 30px; font-size: 2rem; font-family: 'Cinzel', serif;">Select Your Showtime</h3>
+          <div class="showtime-grid">
+            <div class="showtime-card" onclick="selectShowtime(this, '10:00 AM', 'Theater 1', 12.99)">
+              <div class="showtime-time">10:00 AM</div>
+              <div class="showtime-theater">Theater 1 • Standard</div>
+              <div class="showtime-price">$12.99</div>
+            </div>
+            <div class="showtime-card" onclick="selectShowtime(this, '1:30 PM', 'Theater 2', 15.99)">
+              <div class="showtime-time">1:30 PM</div>
+              <div class="showtime-theater">Theater 2 • Premium</div>
+              <div class="showtime-price">$15.99</div>
+            </div>
+            <div class="showtime-card" onclick="selectShowtime(this, '5:00 PM', 'IMAX Theater', 19.99)">
+              <div class="showtime-time">5:00 PM</div>
+              <div class="showtime-theater">IMAX Theater</div>
+              <div class="showtime-price">$19.99</div>
+            </div>
+            <div class="showtime-card" onclick="selectShowtime(this, '8:30 PM', 'Theater 3', 18.99)">
+              <div class="showtime-time">8:30 PM</div>
+              <div class="showtime-theater">Theater 3 • Premium</div>
+              <div class="showtime-price">$18.99</div>
+            </div>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-primary" onclick="nextStep()" id="continueToSeats" disabled>Continue to Seat Selection ✨</button>
+          </div>
+        </div>
+
+        <div class="step-content" id="seatStep" style="display: none;">
+          <h3 style="text-align: center; margin-bottom: 30px; font-size: 2rem; font-family: 'Cinzel', serif;">Choose Your Seats</h3>
+          <div class="cinema-screen">
+            <div class="screen"></div>
+            <div class="screen-label">🎬 Cinema Screen 🎬</div>
+          </div>
+          <div class="seat-legend">
+            <div class="legend-item">
+              <div class="legend-seat available"></div>
+              <span>Available</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-seat premium"></div>
+              <span>Premium (+$5)</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-seat selected"></div>
+              <span>Selected</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-seat occupied"></div>
+              <span>Occupied</span>
+            </div>
+          </div>
+          <div class="seat-layout" id="seatLayout"></div>
+          <div class="booking-summary">
+            <div class="summary-title">Booking Summary</div>
+            <div class="summary-row">
+              <span>Selected Seats:</span>
+              <span id="selectedSeatsDisplay">None</span>
+            </div>
+            <div class="summary-row">
+              <span>Number of Tickets:</span>
+              <span id="ticketCount">0</span>
+            </div>
+            <div class="summary-row">
+              <span>Subtotal:</span>
+              <span id="subtotal">$0.00</span>
+            </div>
+            <div class="summary-row">
+              <span>Service Fee (10%):</span>
+              <span id="serviceFee">$0.00</span>
+            </div>
+            <div class="summary-row summary-total">
+              <span>Total:</span>
+              <span id="totalPrice">$0.00</span>
+            </div>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-secondary" onclick="prevStep()">← Back to Showtimes</button>
+            <button class="btn btn-primary" onclick="nextStep()" id="continueToDetails" disabled>Continue to Details ✨</button>
+          </div>
+        </div>
+
+        <div class="step-content" id="detailsStep" style="display: none;">
+          <h3 style="text-align: center; margin-bottom: 30px; font-size: 2rem; font-family: 'Cinzel', serif;">Customer Details</h3>
+          <div class="form-group">
+            <label class="form-label" for="customerName">Full Name</label>
+            <input type="text" id="customerName" class="form-input" placeholder="Enter your full name" oninput="validateCustomerDetails()">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="customerEmail">Email Address</label>
+            <input type="email" id="customerEmail" class="form-input" placeholder="Enter your email address" oninput="validateCustomerDetails()">
+          </div>
+          <div class="booking-summary">
+            <div class="summary-title">Final Summary</div>
+            <div class="summary-row">
+              <span>Showtime:</span>
+              <span id="finalShowtime">-</span>
+            </div>
+            <div class="summary-row">
+              <span>Theater:</span>
+              <span id="finalTheater">-</span>
+            </div>
+            <div class="summary-row">
+              <span>Seats:</span>
+              <span id="finalSeats">-</span>
+            </div>
+            <div class="summary-row summary-total">
+              <span>Total:</span>
+              <span id="finalTotal">-</span>
+            </div>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-secondary" onclick="prevStep()">← Back to Seats</button>
+            <button class="btn btn-primary" onclick="nextStep()" id="continueToPayment" disabled>Continue to Payment ✨</button>
+          </div>
+        </div>
+
+        <div class="step-content" id="paymentStep" style="display: none;">
+          <h3 style="text-align: center; margin-bottom: 30px; font-size: 2rem; font-family: 'Cinzel', serif;">Payment</h3>
+          <div class="booking-summary">
+            <div class="summary-title">Payment Summary</div>
+            <div class="summary-row">
+              <span>Amount to Pay:</span>
+              <span id="paymentTotal">$0.00</span>
+            </div>
+          </div>
+          <div id="paymentForm">
+            <div class="form-group">
+              <label class="form-label" for="cardNumber">Card Number</label>
+              <input type="text" id="cardNumber" class="form-input" placeholder="1234 5678 9012 3456" maxlength="19">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cardExpiry">Expiry Date</label>
+              <input type="text" id="cardExpiry" class="form-input" placeholder="MM/YY" maxlength="5">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cardCVC">CVC</label>
+              <input type="text" id="cardCVC" class="form-input" placeholder="123" maxlength="3">
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-secondary" onclick="prevStep()">← Back to Details</button>
+              <button class="btn btn-success" onclick="processPayment()">Complete Booking ✨</button>
+            </div>
+          </div>
+          <div id="loadingState" style="display: none;">
+            <div class="loading">
+              <div class="spinner"></div>
+              <span>Processing your booking...</span>
+            </div>
+          </div>
+          <div id="successState" style="display: none;">
+            <div class="success-container">
+              <div class="success-icon">✓</div>
+              <h2 class="success-title">Booking Confirmed!</h2>
+              <div class="booking-summary">
+                <div class="summary-title">Booking Details</div>
+                <div class="summary-row">
+                  <span>Booking ID:</span>
+                  <span id="bookingId">-</span>
+                </div>
+                <div class="summary-row">
+                  <span>Showtime:</span>
+                  <span id="successShowtime">-</span>
+                </div>
+                <div class="summary-row">
+                  <span>Theater:</span>
+                  <span id="successTheater">-</span>
+                </div>
+                <div class="summary-row">
+                  <span>Seats:</span>
+                  <span id="successSeats">-</span>
+                </div>
+                <div class="summary-row">
+                  <span>Customer:</span>
+                  <span id="successCustomer">-</span>
+                </div>
+                <div class="summary-row summary-total">
+                  <span>Total Paid:</span>
+                  <span id="successTotal">-</span>
+                </div>
+              </div>
+              <div class="btn-group">
+                <button class="btn btn-primary" onclick="closeBookingModal()">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer class="footer">
     <p>&copy; 2025 PMG Cinema. All rights reserved.</p>
   </footer>
-  <script src="generic.js"></script>
+  <script src="loading.js"></script>
+  <script src="dashboard.js"></script>
 </body>
 
 </html>
